@@ -1,53 +1,63 @@
-\section{REVIEW OF EXISTING ALTERNATIVES}
-                This chapter should be able to present the following in not more than 600 words: description of how users/clientele currently cope with the problem; assessment of the best available resources for addressing the problem; and description of how your project stands out in comparison to the existing alternatives.
-			\subsection{How to cite references}
-				\lipsum[4]
-				\subsubsection{Apa Subsubsection}
-					APA CITATION SAMPLE HERE USING BIBTEX \citep{CrescenziKann1997}
-			\subsection{Why do we need this?}
-    			The review of existing alternatives is a thorough study of existing applications or solutions and literature that are related to your project. We do this for the following reasons:
-                    \begin{itemize}
-                        \item you get to see what other professionals or researchers and authors in the area where your topic falls have done or are currently doing;
-                        \item you will have a deeper understanding of your topic and of the application that you are proposing to develop;
-                        \item you will know if someone else has already done the same (if you are duplicating a project or a research); and
-                        \item you will have an idea on how other people solved the problems that are similar to yours.
-                    \end{itemize}
+\chapter{REVIEW OF EXISTING ALTERNATIVES}
+\label{chap:review-of-alternatives}
 
-			% ------------------------
-    % Instructions
-    % ------------------------
-    Instructions: Fill in the table below with your proposed system and at least 3 related systems. 
-    Be concise and critical. After completing the table, answer the reflection questions. Once all your answers are in place, remove the instructions and examples before compiling and submitting.}
-    
-    % ------------------------
-    % Comparison Table
-    % ------------------------
-    \begin{table}[ht]
-    \vspace{4ex}
-    \centering
-        \caption{Summary of Existing Alternatives}   
-        \label{table:existing-alternatives-summary}
-        \smalltable
-        % Use ragged-right paragraph columns so cell text is left-aligned and wraps
-        \begin{tabular}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}p{2.8cm}|}
-            \hline
-            	\textbf{System (License)} & \textbf{Platform} & \textbf{Brief Description} & \textbf{Basic Functionalities} & \textbf{Relation to the Proposed System} \\
-            \hline\hline
-            	\textbf{Proposed System: StudyBuddy AR (to be determined)} & Mobile (Android/iOS) & AR app for visualizing academic concepts across disciplines & View molecules, anatomy, circuits, and diagrams in AR; interactive learning modules & -- \\
-            \hline
-            Google Expeditions (Free but discontinued) & Mobile (Android/iOS) & AR/VR app for virtual field trips and basic concepts & Immersive AR/VR lessons and tours & Both use AR for education but Expeditions is broad and discontinued \\
-            \hline
-            Anatomy 3D Atlas (Paid - Subscription) & Mobile (Android/iOS) & Interactive 3D atlas for studying human anatomy & Layered 3D models of organs and systems & Similar in 3D visualization but limited to medicine \\
-            \hline
-            AR Circuits (Free) & Mobile (Android) & Educational AR app for visualizing circuit components & Place circuit components in AR and test connections & Similar AR approach but restricted to electronics \\
-            \hline
-        \end{tabular}
-    \vspace{4ex}
-    \end{table}
+This chapter evaluates current market solutions, generic digital applications, and legacy manual workflows utilized to address domain operational needs. A comparative assessment highlights the technical and operational gaps of existing options, establishing the justification for the proposed \textbf{GoForth} system.
 
-    Discuss the details of each existing alternative and this question: Can You Use This Instead? Why or Why Not? In addition, discuss why your proposed system is necessary, focusing on the following.
-    \begin{itemize}
-    \item Biggest gap in existing systems: Example: No existing AR learning app provides a single platform that covers multiple subjects. Most are subject-specific.
-    \item Why our project is still worth developing: Example: StudyBuddy AR combines features from various niche applications into one unified platform, making it more versatile for students.
-    \item Our unique contribution: Example: A cross-disciplinary AR educational tool designed for general college learning, not restricted to one field.
+\section{Evaluation of Existing Alternatives}
+
+\subsection{Direct Commercial Solutions}
+Commercial Off-The-Shelf (COTS) platforms provide pre-built enterprise functionality and established compliance features. However, these systems present significant constraints for targeted deployment:
+\begin{itemize}
+    \item \textbf{High Cost Overhead:} Recurring per-user licensing costs create prohibitive financial barriers.
+    \item \textbf{Workflow Inflexibility:} Fixed feature sets cannot adapt to localized organizational workflows.
+    \item \textbf{Integration Limits:} Restricted programmatic access prevents custom API integrations.
+\end{itemize}
+
+\subsection{Generic Digital Tools}
+Organizations frequently adapt productivity applications (e.g., spreadsheets and basic messaging tools) to plug operational gaps. Key limitations include:
+\begin{itemize}
+    \item \textbf{Data Integrity Risks:} High susceptibility to manual entry errors and inconsistent formatting.
+    \item \textbf{Lack of Automation:} Absence of automated validation routines, dynamic notifications, and real-time synchronization.
+    \item \textbf{Security Vulnerabilities:} Inadequate role-based access control (RBAC) and lack of formal audit logging.
+\end{itemize}
+
+\subsection{Manual / Legacy Workflows}
+Traditional paper-based record-keeping and verbal coordination remain prevalent due to minimal setup requirements. Primary drawbacks include:
+\begin{itemize}
+    \item \textbf{High Latency:} Paper-bound approvals and manual filing slow operational throughput.
+    \item \textbf{Risk of Physical Loss:} Physical files are vulnerable to damage, misplacement, and unauthorized access.
+    \item \textbf{Absence of Analytics:} Inability to generate aggregate operational metrics or real-time reports.
+\end{itemize}
+
+\section{Comparative Analysis}
+
+Table~\ref{tab:summary_alternatives} summarizes the proposed system alongside existing alternative solutions.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of Existing Alternatives}
+\label{tab:summary_alternatives}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|p{0.2\textwidth}|p{0.15\textwidth}|p{0.22\textwidth}|p{0.23\textwidth}|p{0.2\textwidth}|}
+\hline
+\textbf{System (License)} & \textbf{Platform} & \textbf{Brief Description} & \textbf{Basic Functionalities} & \textbf{Relation to Proposed System} \\ \hline
+\textbf{Proposed System: GoForth} (Proprietary / Internal) & Web / Mobile & Integrated operational management platform tailored for domain workflows & Centralized record management, automated notifications, role-based access, real-time analytics & N/A (Proposed Target Solution) \\ \hline
+\textbf{Commercial Enterprise Suite} (Paid - Subscription) & Web (SaaS) & Proprietary enterprise solution for domain operational tracking & Task tracking, user management, basic reporting dashboards & High feature overlap, but restricted customization and high subscription cost \\ \hline
+\textbf{Generic Spreadsheet Application} (Freemium) & Web / Desktop / Mobile & Shared grid application used for ad-hoc record keeping & Tabular data entry, basic formulas, shared cloud storage & Flexible data grid, but lacks automated validation, RBAC, and real-time triggers \\ \hline
+\textbf{Manual Paper System} (N/A) & Physical Paper & Legacy paper logbooks and physical file folders & Physical logging, manual signatures, paper archiving & Zero technology dependency, but suffers from high latency and zero data security \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Gap Analysis and System Rationale}
+
+\subsection{Can You Use These Alternatives Instead?}
+While commercial platforms offer robust functionality, their high recurring cost and rigid architecture prevent full alignment with localized requirements. Generic tools and manual processes offer low entry barriers but fail to maintain data integrity, security, and real-time processing capabilities. Consequently, existing options cannot be used as direct replacements.
+
+\subsection{Rationale for GoForth}
+Developing the proposed \textbf{GoForth} system is necessary due to the following factors:
+\begin{itemize}
+    \item \textbf{Biggest Gap in Existing Systems:} No single existing solution offers specialized domain-specific workflows combined with automated real-time validation and low-cost deployment.
+    \item \textbf{Why Our Project is Worth Developing:} \textbf{GoForth} unifies disparate manual and generic digital processes into a single, cohesive platform, eliminating operational latency and data redundancy.
+    \item \textbf{Our Unique Contribution:} An extensible, role-secured digital management framework optimized specifically for targeted operational environments.
 \end{itemize}
